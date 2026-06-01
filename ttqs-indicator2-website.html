@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>社團法人台灣創意啟發協會 | 訓練政策與課程體系</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1a2e;
+    --ink2: #2d2d4a;
+    --muted: #6b6b8a;
+    --accent: #0d6e4f;
+    --accent2: #1a9e72;
+    --accent3: #e8f7f1;
+    --gold: #c9860a;
+    --gold-light: #fdf3e0;
+    --surface: #f9f8f5;
+    --white: #ffffff;
+    --border: #e2e0da;
+    --red: #c0392b;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background: var(--surface);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  /* ── Header ── */
+  header {
+    background: var(--ink);
+    color: #fff;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 3px solid var(--accent2);
+  }
+  .header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 24px;
+  }
+  .logo-block { display: flex; align-items: center; gap: 14px; }
+  .logo-icon {
+    width: 46px; height: 46px;
+    background: var(--accent2);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 22px; font-weight: 900;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .logo-text { line-height: 1.2; }
+  .logo-text .org { font-size: 11px; color: rgba(255,255,255,0.55); letter-spacing: 0.05em; }
+  .logo-text .name { font-size: 16px; font-weight: 700; color: #fff; }
+  nav { display: flex; gap: 6px; }
+  nav a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;
+  }
+  nav a:hover { background: rgba(255,255,255,0.1); color: #fff; }
+  .nav-badge {
+    background: var(--accent2);
+    color: #fff;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 20px;
+    margin-left: 4px;
+    font-weight: 500;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    background: var(--ink);
+    color: #fff;
+    padding: 80px 24px 70px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    background: rgba(26, 158, 114, 0.08);
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: 10%;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    background: rgba(201, 134, 10, 0.06);
+  }
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  .ttqs-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(26, 158, 114, 0.15);
+    border: 1px solid rgba(26, 158, 114, 0.4);
+    color: var(--accent2);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 0.04em;
+  }
+  .ttqs-dot { width: 7px; height: 7px; background: var(--accent2); border-radius: 50%; }
+  .hero h1 {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1.25;
+    margin-bottom: 16px;
+    color: #fff;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--accent2);
+  }
+  .hero-desc {
+    font-size: 16px;
+    color: rgba(255,255,255,0.65);
+    max-width: 600px;
+    margin-bottom: 36px;
+    line-height: 1.9;
+  }
+  .hero-stats {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .stat-item { border-left: 3px solid var(--accent2); padding-left: 14px; }
+  .stat-num { font-size: 28px; font-weight: 700; color: #fff; line-height: 1; }
+  .stat-label { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 4px; }
+
+  /* ── Section ── */
+  section { max-width: 1100px; margin: 0 auto; padding: 60px 24px; }
+  .section-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+  h2.section-title {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 30px;
+    font-weight: 900;
+    color: var(--ink);
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+  .section-sub {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 40px;
+    max-width: 560px;
+    line-height: 1.8;
+  }
+  .divider { border: none; border-top: 1px solid var(--border); margin: 0 24px; }
+
+  /* ── Policy Grid (指標2) ── */
+  .policy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+  .policy-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px 24px;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.25s, transform 0.25s;
+  }
+  .policy-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.07); }
+  .policy-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+  }
+  .policy-card.green::before { background: var(--accent2); }
+  .policy-card.gold::before { background: var(--gold); }
+  .policy-card.blue::before { background: #1a6eb5; }
+  .policy-card.purple::before { background: #7c4dcc; }
+  .policy-num {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .policy-icon { font-size: 32px; margin-bottom: 12px; }
+  .policy-card h3 { font-size: 17px; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
+  .policy-card p { font-size: 13px; color: var(--muted); line-height: 1.7; }
+  .policy-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+  .tag {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+  .tag-green { background: var(--accent3); color: var(--accent); }
+  .tag-gold { background: var(--gold-light); color: var(--gold); }
+  .tag-blue { background: #e8f2fc; color: #1a6eb5; }
+  .tag-purple { background: #f0e8fc; color: #7c4dcc; }
+
+  /* ── Course Clusters ── */
+  .course-section { background: var(--ink); padding: 60px 0; }
+  .course-section > .inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  .course-section .section-tag { color: var(--accent2); }
+  .course-section h2 { color: #fff; }
+  .course-section .section-sub { color: rgba(255,255,255,0.5); }
+  .cluster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 32px;
+  }
+  .cluster-card {
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 14px;
+    padding: 26px 22px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cluster-card::after {
+    content: attr(data-roman);
+    position: absolute;
+    top: -12px; right: 16px;
+    font-size: 64px;
+    font-weight: 900;
+    font-family: 'Noto Serif TC', serif;
+    opacity: 0.05;
+    color: #fff;
+    line-height: 1;
+  }
+  .cluster-card h4 { font-size: 15px; font-weight: 700; margin-bottom: 10px; }
+  .cluster-card .desc { font-size: 12px; opacity: 0.6; line-height: 1.7; margin-bottom: 14px; }
+  .cluster-card ul { list-style: none; }
+  .cluster-card ul li {
+    font-size: 12px;
+    opacity: 0.75;
+    padding: 3px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding-left: 14px;
+    position: relative;
+  }
+  .cluster-card ul li::before {
+    content: '›';
+    position: absolute; left: 0;
+    opacity: 0.5;
+  }
+  .c1 { background: rgba(26,158,114,0.12); color: #a8e6cd; }
+  .c1 h4 { color: var(--accent2); }
+  .c2 { background: rgba(201,134,10,0.1); color: #f0d080; }
+  .c2 h4 { color: #e6a820; }
+  .c3 { background: rgba(26,110,181,0.12); color: #90c0f0; }
+  .c3 h4 { color: #5aa8e8; }
+  .c4 { background: rgba(124,77,204,0.12); color: #c8a8f0; }
+  .c4 h4 { color: #b070e8; }
+
+  /* ── PDDRO Flow ── */
+  .pddro-section { background: #fff; }
+  .pddro-flow {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    overflow-x: auto;
+    margin-top: 32px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .pddro-step {
+    flex: 1;
+    min-width: 160px;
+    padding: 28px 20px;
+    text-align: center;
+    border-right: 1px solid var(--border);
+    position: relative;
+  }
+  .pddro-step:last-child { border-right: none; }
+  .pddro-letter {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .pddro-name { font-size: 13px; font-weight: 700; margin-bottom: 6px; color: var(--ink); }
+  .pddro-desc { font-size: 11px; color: var(--muted); line-height: 1.6; }
+  .s-p .pddro-letter { color: var(--accent); }
+  .s-d1 .pddro-letter { color: var(--gold); }
+  .s-d2 .pddro-letter { color: #1a6eb5; }
+  .s-r .pddro-letter { color: #7c4dcc; }
+  .s-o .pddro-letter { color: var(--red); }
+  .pddro-step:hover { background: var(--surface); }
+
+  /* ── Indicator Table ── */
+  .indicator-section { background: var(--surface); }
+  .ind-table { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 13px; }
+  .ind-table thead th {
+    background: var(--ink);
+    color: #fff;
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+  .ind-table tbody tr { border-bottom: 1px solid var(--border); }
+  .ind-table tbody tr:hover { background: #fff; }
+  .ind-table td { padding: 12px 16px; vertical-align: top; color: var(--ink2); }
+  .ind-table td:first-child { font-weight: 600; color: var(--accent); white-space: nowrap; }
+  .score-bar {
+    display: flex; align-items: center; gap: 8px;
+  }
+  .bar-track {
+    flex: 1; height: 6px;
+    background: var(--border);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .bar-fill { height: 100%; border-radius: 3px; background: var(--accent2); }
+  .score-num { font-size: 11px; font-weight: 700; color: var(--accent); min-width: 24px; }
+
+  /* ── BSC ── */
+  .bsc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 32px;
+  }
+  .bsc-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 20px;
+  }
+  .bsc-perspective {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: inline-block;
+  }
+  .bsc-card h4 { font-size: 15px; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
+  .bsc-card p { font-size: 12px; color: var(--muted); line-height: 1.7; }
+  .bsc-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: var(--muted);
+    padding: 8px 0;
+  }
+
+  /* ── Contact / Footer ── */
+  footer {
+    background: var(--ink2);
+    color: rgba(255,255,255,0.6);
+    padding: 40px 24px;
+    text-align: center;
+    font-size: 13px;
+  }
+  footer a { color: var(--accent2); text-decoration: none; }
+  footer strong { color: #fff; }
+
+  /* ── TTQS Score Badge ── */
+  .ttqs-score-section {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+    color: #fff;
+    padding: 50px 24px;
+  }
+  .ttqs-score-inner { max-width: 1100px; margin: 0 auto; }
+  .score-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+    margin-top: 32px;
+  }
+  .score-card {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 12px;
+    padding: 20px 16px;
+    text-align: center;
+  }
+  .score-card .big { font-size: 36px; font-weight: 900; color: #fff; line-height: 1; }
+  .score-card .unit { font-size: 14px; opacity: 0.7; }
+  .score-card .label { font-size: 11px; opacity: 0.6; margin-top: 6px; }
+
+  @media (max-width: 680px) {
+    .hero h1 { font-size: 28px; }
+    nav { display: none; }
+    .pddro-flow { flex-direction: column; }
+    .pddro-step { border-right: none; border-bottom: 1px solid var(--border); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+  <div class="header-inner">
+    <div class="logo-block">
+      <div class="logo-icon">創</div>
+      <div class="logo-text">
+        <div class="org">社團法人</div>
+        <div class="name">台灣創意啟發協會</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#policy">訓練政策 <span class="nav-badge">指標2</span></a>
+      <a href="#courses">課程體系</a>
+      <a href="#pddro">PDDRO流程</a>
+      <a href="#bsc">BSC連結</a>
+      <a href="#indicators">評核指標</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ── HERO ── -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="ttqs-badge">
+      <div class="ttqs-dot"></div>
+      TTQS 訓練機構版 · 評核專區
+    </div>
+    <h1>訓練政策公告<br><em>培育 AI × ESG 人才</em></h1>
+    <p class="hero-desc">
+      本協會以 ESG 永續發展為核心使命，透過系統化 PDDRO 流程，
+      連結政府政策、企業需求與學員職能成長，提供高品質訓練服務。
+      官網：<a href="http://www.esgesg.org.tw/" style="color:var(--accent2);">www.esgesg.org.tw</a>
+    </p>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">16件+</div>
+        <div class="stat-label">年度委訓合作目標</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">1,000H</div>
+        <div class="stat-label">年度訓練時數目標</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">25件</div>
+        <div class="stat-label">學界就業學程提案</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">2套</div>
+        <div class="stat-label">核心訓練模組</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── POLICY 指標2 ── -->
+<section id="policy">
+  <div class="section-tag">TTQS 計畫 · 指標 2</div>
+  <h2 class="section-title">明確的訓練政策</h2>
+  <p class="section-sub">本協會依 TTQS 指標 2 規範，公告四大訓練政策群組，確保課程設計與市場需求高度連結，並揭露評核標準與優惠辦法。</p>
+  <div class="policy-grid">
+    <div class="policy-card green">
+      <div class="policy-num">群組 I</div>
+      <div class="policy-icon">🌱</div>
+      <h3>永續發展教育課程</h3>
+      <p>普及 ESG 基礎知識，擴大潛在學員群體，建立協會的知識權威與市場信任。</p>
+      <div class="policy-tags">
+        <span class="tag tag-green">ESG 基礎</span>
+        <span class="tag tag-green">公開招生</span>
+        <span class="tag tag-green">iPAS 認證</span>
+      </div>
+    </div>
+    <div class="policy-card gold">
+      <div class="policy-num">群組 II</div>
+      <div class="policy-icon">🏢</div>
+      <h3>企業暨團體委訓課程</h3>
+      <p>提供客製化解決方案，滿足企業內部永續部門或供應鏈的實戰需求，創造穩定營收。</p>
+      <div class="policy-tags">
+        <span class="tag tag-gold">客製化</span>
+        <span class="tag tag-gold">委訓合作</span>
+        <span class="tag tag-gold">訓用合一</span>
+      </div>
+    </div>
+    <div class="policy-card blue">
+      <div class="policy-num">群組 III</div>
+      <div class="policy-icon">🏛️</div>
+      <h3>政府相關訓練課程</h3>
+      <p>積極配合政府政策，爭取職訓專案經費，提升協會的政策影響力與社會地位。</p>
+      <div class="policy-tags">
+        <span class="tag tag-blue">勞動部職訓</span>
+        <span class="tag tag-blue">SBIR / CITD</span>
+        <span class="tag tag-blue">補助計畫</span>
+      </div>
+    </div>
+    <div class="policy-card purple">
+      <div class="policy-num">群組 IV</div>
+      <div class="policy-icon">🌐</div>
+      <h3>全球國際交流課程</h3>
+      <p>引入國際最新 ESG 趨勢與標準，提升師資與學員的專業領先性與國際化視野。</p>
+      <div class="policy-tags">
+        <span class="tag tag-purple">新南向</span>
+        <span class="tag tag-purple">國際工作營</span>
+        <span class="tag tag-purple">交換研習</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ── COURSE CLUSTERS ── -->
+<div class="course-section" id="courses">
+  <div class="inner">
+    <div class="section-tag">訓練體系 · 指標 3</div>
+    <h2 class="section-title" style="color:#fff;">AI × ESG 核心訓練體系</h2>
+    <p class="section-sub">明確的 PDDRO 訓練體系與四大核心訓練類別，對應 AI 與 ESG 職能基準需求。</p>
+    <div class="cluster-grid">
+      <div class="cluster-card c1" data-roman="I">
+        <h4>ESG 治理與合規</h4>
+        <p class="desc">涵蓋公司治理、風險管控與永續報告核心知識。</p>
+        <ul>
+          <li>ESG 永續報告書撰寫</li>
+          <li>溫室氣體盤查 (GHG)</li>
+          <li>碳足跡 CFP 計算</li>
+          <li>金管會 ESG 強制申報</li>
+          <li>ISO 14064 / 碳中和</li>
+        </ul>
+      </div>
+      <div class="cluster-card c2" data-roman="II">
+        <h4>AI 賦能 ESG</h4>
+        <p class="desc">以人工智慧工具加速永續數據分析與決策效率。</p>
+        <ul>
+          <li>AI 提示詞工程</li>
+          <li>AI 數據處理與自動化</li>
+          <li>AI 碳盤查與計算</li>
+          <li>AI 氣候風險分析</li>
+          <li>AI + RPA 自動化</li>
+        </ul>
+      </div>
+      <div class="cluster-card c3" data-roman="III">
+        <h4>企業管理與人資</h4>
+        <p class="desc">提升組織治理效能，強化人才管理與職能發展。</p>
+        <ul>
+          <li>TTQS 訓練品質管理</li>
+          <li>ISO 管理系統</li>
+          <li>職場健康與安全</li>
+          <li>企業診斷與輔導</li>
+          <li>社會責任 CSR</li>
+        </ul>
+      </div>
+      <div class="cluster-card c4" data-roman="IV">
+        <h4>AI 視覺與創新設計</h4>
+        <p class="desc">運用 AI 工具提升視覺設計與創意產出效能。</p>
+        <ul>
+          <li>AI 視覺設計應用</li>
+          <li>創意會場規劃設計</li>
+          <li>活動企劃與執行</li>
+          <li>數位行銷策略</li>
+          <li>品牌視覺識別</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── PDDRO FLOW ── -->
+<section id="pddro" class="pddro-section" style="background:#fff; padding:60px 24px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="section-tag">訓練品質管理迴圈</div>
+    <h2 class="section-title">PDDRO 作業流程</h2>
+    <p class="section-sub">依據 TTQS 精神展開年度訓練計畫，確保「說、做、寫」一致性與「流程上下連結」。</p>
+    <div class="pddro-flow">
+      <div class="pddro-step s-p">
+        <div class="pddro-letter">P</div>
+        <div class="pddro-name">計畫 Plan</div>
+        <div class="pddro-desc">
+          願景使命 SWOT 分析<br>
+          策略地圖<br>
+          年度訓練計畫<br>
+          需求調查表
+        </div>
+      </div>
+      <div class="pddro-step s-d1">
+        <div class="pddro-letter">D</div>
+        <div class="pddro-name">設計 Design</div>
+        <div class="pddro-desc">
+          課程規劃書<br>
+          學習目標設定<br>
+          師資遴選<br>
+          教材開發
+        </div>
+      </div>
+      <div class="pddro-step s-d2">
+        <div class="pddro-letter">D</div>
+        <div class="pddro-name">執行 Do</div>
+        <div class="pddro-desc">
+          開班通知<br>
+          報名與簽到<br>
+          課程實施<br>
+          教學日誌
+        </div>
+      </div>
+      <div class="pddro-step s-r">
+        <div class="pddro-letter">R</div>
+        <div class="pddro-name">監控 Review</div>
+        <div class="pddro-desc">
+          學員學習回饋單<br>
+          講師教學回饋<br>
+          異常處理記錄<br>
+          結案分析報告
+        </div>
+      </div>
+      <div class="pddro-step s-o">
+        <div class="pddro-letter">O</div>
+        <div class="pddro-name">成果 Outcome</div>
+        <div class="pddro-desc">
+          L1–L4 評估<br>
+          訓後動態調查<br>
+          學員回訓率<br>
+          組織績效報告
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BSC ── -->
+<section id="bsc" style="background:var(--surface);">
+  <div class="section-tag">策略連結 · 指標 1 & 5</div>
+  <h2 class="section-title">BSC 平衡計分卡 × 訓練規劃</h2>
+  <p class="section-sub">從「學習與成長」構面出發，推導訓練計畫如何支撐協會整體策略目標，達成 TTQS 訓練規劃與經營目標的連結性。</p>
+  <div style="background:#fff;border:1px solid var(--border);border-radius:16px;padding:28px;max-width:100%;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0;">
+      <div style="padding:20px;border-right:1px solid var(--border);text-align:center;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;color:var(--red);text-transform:uppercase;margin-bottom:8px;">財務</div>
+        <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:6px;">增加訓練收益</div>
+        <div style="font-size:12px;color:var(--muted);">委訓案件 16+ 件<br>訓練時數 1,000H</div>
+      </div>
+      <div style="padding:20px;border-right:1px solid var(--border);text-align:center;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;color:#1a6eb5;text-transform:uppercase;margin-bottom:8px;">顧客</div>
+        <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:6px;">提升學員滿意度</div>
+        <div style="font-size:12px;color:var(--muted);">L1 滿意度 ≥4.2<br>回訓率持續成長</div>
+      </div>
+      <div style="padding:20px;border-right:1px solid var(--border);text-align:center;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;color:var(--accent);text-transform:uppercase;margin-bottom:8px;">內部流程</div>
+        <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:6px;">強化訓練品質</div>
+        <div style="font-size:12px;color:var(--muted);">PDDRO 標準化<br>SOP 文件完整</div>
+      </div>
+      <div style="padding:20px;text-align:center;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;color:var(--gold);text-transform:uppercase;margin-bottom:8px;">學習與成長</div>
+        <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:6px;">培育 AI×ESG 人才</div>
+        <div style="font-size:12px;color:var(--muted);">職能缺口分析<br>模組制定 2 套</div>
+      </div>
+    </div>
+    <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border);font-size:12px;color:var(--muted);text-align:center;">
+      ↑ 由下而上推導：學習與成長構面的訓練投入，驅動內部流程優化，進而提升顧客滿意度，最終達成財務目標
+    </div>
+  </div>
+</section>
+
+<!-- ── INDICATOR TABLE ── -->
+<section id="indicators" style="background:#fff;">
+  <div class="section-tag">TTQS 評核 · 自評紀錄</div>
+  <h2 class="section-title">訓練機構版指標概覽</h2>
+  <p class="section-sub">依 TTQS 訓練機構版 PDDRO 架構，本協會各項指標執行現況摘要（目標分數 4 分：具「說、做、寫」一致性）。</p>
+  <table class="ind-table">
+    <thead>
+      <tr>
+        <th>指標</th>
+        <th>名稱</th>
+        <th>主要佐證資料</th>
+        <th style="width:160px;">目標進度</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>指標 1</td>
+        <td>未來經營方向與目標</td>
+        <td>策略地圖、SWOT/TOWS 分析、理事會決議五階段</td>
+        <td><div class="score-bar"><div class="bar-track"><div class="bar-fill" style="width:80%"></div></div><span class="score-num">4</span></div></td>
+      </tr>
+      <tr>
+        <td>指標 2</td>
+        <td>明確的訓練政策</td>
+        <td>四大訓練政策群組、官網公告、優惠辦法、課程 EDM</td>
+        <td><div class="score-bar"><div class="bar-track"><div class="bar-fill" style="width:80%"></div></div><span class="score-num">4</span></div></td>
+      </tr>
+      <tr>
+        <td>指標 3</td>
+        <td>明確的 PDDRO 訓練體系</td>
+        <td>AI×ESG 核心訓練類別清單、職能缺口分析、KPI 設定</td>
+        <td><div class="score-bar"><div class="bar-track"><div class="bar-fill" style="width:80%"></div></div><span class="score-num">4</span></div></td>
+      </tr>
+      <tr>
+        <td>指標 4</td>
+        <td>訓練品質管理系統化文件</td>
+        <td>訓練手冊、SOP 文件、電子化訓練系統、教育訓練管理辦法</td>
+        <td><div class="score-bar"><div class="bar-track"><div class="bar-fill" style="width:80%"></div></div><span class="score-num">4</span></div></td>
+      </tr>
+      <tr>
+        <td>指標 5</td>
+        <td>訓練規劃與經營目標連結</td>
+        <td>年度訓練計畫、BSC 連結圖示、溝通客戶績效目標證明</td>
+        <td><div class="score-bar"><div class="bar-track"><div class="bar-fill" style="width:80%"></div></div><span class="score-num">4</span></div></td>
+      </tr>
+      <tr>
+        <td>指標 6</td>
+        <td>訓練發展能力與責任</td>
+        <td>TTQS 結業證書、職能評核標準、工作職掌表</td>
+        <td><div class="score-bar"><div class="bar-track"><div class="bar-fill" style="width:60%"></div></div><span class="score-num">3</span></div></td>
+      </tr>
+      <tr>
+        <td>指標 12B</td>
+        <td>師資甄選、運用及發展</td>
+        <td>師資遴選管理辦法、師資庫名冊、年度考核機制</td>
+        <td><div class="score-bar"><div class="bar-track"><div class="bar-fill" style="width:80%"></div></div><span class="score-num">4</span></div></td>
+      </tr>
+      <tr>
+        <td>指標 17</td>
+        <td>學員訓練成效評估</td>
+        <td>L1-L4 四層評估機制、訓後動態調查表、行動計畫表</td>
+        <td><div class="score-bar"><div class="bar-track"><div class="bar-fill" style="width:80%"></div></div><span class="score-num">4</span></div></td>
+      </tr>
+      <tr>
+        <td>指標 18</td>
+        <td>目標客戶及學員評價</td>
+        <td>學員建議單統計、訓前後自評雷達圖、感謝函</td>
+        <td><div class="score-bar"><div class="bar-track"><div class="bar-fill" style="width:80%"></div></div><span class="score-num">4</span></div></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ── SCORE SUMMARY ── -->
+<div class="ttqs-score-section">
+  <div class="ttqs-score-inner">
+    <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:8px;">訓練成果 · Outcome</div>
+    <h2 style="font-family:'Noto Serif TC',serif;font-size:28px;font-weight:900;color:#fff;margin-bottom:8px;">年度訓練績效目標</h2>
+    <p style="color:rgba(255,255,255,0.6);font-size:14px;margin-bottom:0;">本協會透過系統化訓練管理，確保每一項訓練投入均能回饋至可量化的組織成果。</p>
+    <div class="score-cards">
+      <div class="score-card">
+        <div class="big">L1</div>
+        <div class="unit">滿意度 ≥ 4.2</div>
+        <div class="label">反應層次評估</div>
+      </div>
+      <div class="score-card">
+        <div class="big">L2</div>
+        <div class="unit">測驗通過率 ≥ 80%</div>
+        <div class="label">學習層次評估</div>
+      </div>
+      <div class="score-card">
+        <div class="big">L3</div>
+        <div class="unit">行為轉化追蹤</div>
+        <div class="label">90天行動計畫</div>
+      </div>
+      <div class="score-card">
+        <div class="big">L4</div>
+        <div class="unit">組織績效改善</div>
+        <div class="label">年度成效報告</div>
+      </div>
+      <div class="score-card">
+        <div class="big">85%</div>
+        <div class="unit">學員滿意度</div>
+        <div class="label">整體訓練評價</div>
+      </div>
+      <div class="score-card">
+        <div class="big">30%</div>
+        <div class="unit">回訓成長率</div>
+        <div class="label">學員忠誠指標</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── CONTACT ── -->
+<section style="background:#fff;padding:50px 24px;">
+  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;">
+    <div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;color:var(--accent);text-transform:uppercase;margin-bottom:10px;">課程需求洽詢</div>
+      <div style="font-size:13px;color:var(--muted);line-height:2;">
+        歡迎企業、機構提出客製化委訓需求<br>
+        請填寫「課程需求申請表」(手冊50)<br>
+        或透過以下管道與我們聯繫
+      </div>
+    </div>
+    <div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;color:var(--accent);text-transform:uppercase;margin-bottom:10px;">聯絡資訊</div>
+      <div style="font-size:13px;color:var(--muted);line-height:2;">
+        🌐 <a href="http://www.esgesg.org.tw/" style="color:var(--accent2);">www.esgesg.org.tw</a><br>
+        📘 <a href="https://www.facebook.com/SBIRME/" style="color:var(--accent2);">Facebook 粉絲專頁</a><br>
+        📍 台灣・台中市
+      </div>
+    </div>
+    <div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;color:var(--accent);text-transform:uppercase;margin-bottom:10px;">相關認證</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px;">
+        <span style="font-size:11px;background:var(--accent3);color:var(--accent);padding:5px 12px;border-radius:20px;font-weight:600;">TTQS 訓練機構版</span>
+        <span style="font-size:11px;background:var(--gold-light);color:var(--gold);padding:5px 12px;border-radius:20px;font-weight:600;">iPAS ESG</span>
+        <span style="font-size:11px;background:#e8f2fc;color:#1a6eb5;padding:5px 12px;border-radius:20px;font-weight:600;">ISO 顧問認證</span>
+        <span style="font-size:11px;background:#f0e8fc;color:#7c4dcc;padding:5px 12px;border-radius:20px;font-weight:600;">SBIR / CITD</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <strong>社團法人台灣創意啟發協會</strong><br>
+  本頁面依 TTQS 訓練機構版<strong>指標 2「明確的訓練政策」</strong>規範建置，作為訓練政策公開揭露之佐證資料。<br><br>
+  <a href="http://www.esgesg.org.tw/">官方網站</a> ·
+  <a href="https://www.facebook.com/SBIRME/">Facebook</a> ·
+  TTQS 評核年度：2025–2026
+</footer>
+
+</body>
+</html>
